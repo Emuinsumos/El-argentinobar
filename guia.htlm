@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual Integral de Uso | El Argentino</title>
+<meta name="theme-color" content="#1A110D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.85em' font-size='80'%3E📖%3C/text%3E%3C/svg%3E">
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,500;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- Iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['EB Garamond', 'serif'],
+          heading: ['Playfair Display', 'serif'],
+        },
+        colors: {
+          cafe: {
+            50: '#FDFBF7', 100: '#F0E8D9', 200: '#DFD1B8', 300: '#C7B190',
+            400: '#A88C64', 500: '#8C6C42', 600: '#70502D', 700: '#52371D',
+            800: '#382212', 900: '#1A110D',
+          },
+          bronce: { 300: '#F2D388', 400: '#D6AE55', 500: '#B8863B', 600: '#946624' },
+          vino: { 500: '#8B2626', 600: '#6B1B1B', 700: '#4A1111', 800: '#2E0909' },
+          celeste: { 400: '#8FC1E8', 500: '#75AADB', 600: '#5C93C7' }
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Estilos base idénticos a El Argentino -->
+<style>
+  body {
+    font-family: 'EB Garamond', serif;
+    background-color: #FDFBF7;
+    color: #2A1D14;
+  }
+  h1, h2, h3, h4, .font-heading { font-family: 'Playfair Display', serif; }
+  
+  .bg-papel {
+    background-color: #FDFBF7;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(214,174,85,0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(107,27,27,0.03) 0px, transparent 50%);
+  }
+
+  .filete-borde {
+    border: 1px solid #DFD1B8;
+    box-shadow: 0 4px 6px -1px rgba(26, 17, 13, 0.05), 0 2px 4px -1px rgba(26, 17, 13, 0.03);
+  }
+
+  /* Estilos para impresión */
+  @media print {
+    body { background: white !important; }
+    .bg-papel { background-image: none !important; }
+    .no-print { display: none !important; }
+  }
+</style>
+</head>
+<body class="bg-papel min-h-screen antialiased selection:bg-bronce-400 selection:text-cafe-900 pb-16">
+
+  <!-- ENCABEZADO -->
+  <header class="relative overflow-hidden mb-10 no-print">
+    <div class="absolute inset-0" style="background-image: linear-gradient(to bottom, #75AADB 0%, #75AADB 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #75AADB 66.66%, #75AADB 100%)"></div>
+    <div class="relative max-w-4xl mx-auto px-4 py-8">
+      <div class="bg-cafe-50 border-2 border-bronce-500 rounded-2xl shadow-xl px-6 py-6 text-center">
+        <h1 class="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-cafe-900 mb-2">Manual de Uso Completo</h1>
+        <div class="flex justify-center gap-1.5 mb-2 text-bronce-500 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-cafe-600 text-lg tracking-wide uppercase font-semibold">El Argentino · Guía de Consumidor y Administración</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-5 space-y-10">
+    
+    <!-- INTRODUCCIÓN -->
+    <section class="text-center mb-6">
+      <p class="text-xl text-cafe-800 leading-relaxed">Bienvenido a la guía integral de la plataforma. Este documento contiene tanto el funcionamiento de la tienda desde la perspectiva del <strong>cliente</strong> (cómo navega y realiza sus pedidos) como el instructivo para el <strong>administrador</strong> (gestión de la carta, pedidos, stock y caja).</p>
+    </section>
+
+    <!-- BLOQUE A: EXPERIENCIA DEL CONSUMIDOR / CLIENTE -->
+    <div class="pt-4 border-t-2 border-bronce-500">
+      <div class="bg-bronce-500 text-white px-4 py-2 rounded-t-xl inline-block font-heading font-bold uppercase tracking-wider text-sm">
+        Módulo 1
+      </div>
+      <h2 class="font-heading text-3xl font-bold text-cafe-900 mb-6">Experiencia del Consumidor (¿Cómo pide el cliente?)</h2>
+    </div>
+
+    <!-- PASO A PASO DEL CLIENTE -->
+    <section class="bg-white rounded-2xl filete-borde p-6 sm:p-8 space-y-6">
+      <div class="flex items-center gap-4 border-b border-cafe-200 pb-4">
+        <i class="fa-solid fa-mobile-screen-button text-3xl text-bronce-600"></i>
+        <h3 class="font-heading text-2xl font-bold text-cafe-900">1. Selección de Modalidad al Ingresar</h3>
+      </div>
+      <p class="text-cafe-800 text-lg">
+        Apenas el cliente escanea el código QR de la mesa o ingresa mediante el link web, la pantalla le permite elegir su tipo de consumo:
+      </p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-cafe-50 p-4 rounded-xl border border-cafe-200 text-center">
+          <i class="fa-solid fa-chair text-2xl text-bronce-600 mb-2"></i>
+          <h4 class="font-bold text-cafe-900 mb-1">En Mesa</h4>
+          <p class="text-xs text-cafe-700">Asigna automáticamente o solicita el número de mesa para que la cocina sepa a dónde llevar el pedido.</p>
+        </div>
+        <div class="bg-cafe-50 p-4 rounded-xl border border-cafe-200 text-center">
+          <i class="fa-solid fa-bag-shopping text-2xl text-bronce-600 mb-2"></i>
+          <h4 class="font-bold text-cafe-900 mb-1">Take Away (Para retirar)</h4>
+          <p class="text-xs text-cafe-700">El cliente encarga su pedido con anticipación para pasar a buscarlo por el local.</p>
+        </div>
+        <div class="bg-cafe-50 p-4 rounded-xl border border-cafe-200 text-center">
+          <i class="fa-solid fa-motorcycle text-2xl text-bronce-600 mb-2"></i>
+          <h4 class="font-bold text-cafe-900 mb-1">Delivery</h4>
+          <p class="text-xs text-cafe-700">Solicita los datos del domicilio para hacer el envío hasta la puerta de su casa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-2xl filete-borde p-6 sm:p-8 space-y-6">
+      <div class="flex items-center gap-4 border-b border-cafe-200 pb-4">
+        <i class="fa-solid fa-cart-flatbed text-3xl text-bronce-600"></i>
+        <h3 class="font-heading text-2xl font-bold text-cafe-900">2. Elección de Platos y Control del Consumo</h3>
+      </div>
+
+      <div class="space-y-4 text-cafe-800 text-lg">
+        <ul class="list-disc list-inside space-y-3">
+          <li><strong>Exploración del Menú:</strong> El cliente puede desplazarse por las categorías (Parrilla, Minutas, Postres, Bebidas) o tocar las promociones destacadas en el <i>Plato del Día</i> y <i>Combos</i>.</li>
+          <li><strong>Detalles y Aclaraciones:</strong> Al hacer clic en un plato, puede seleccionar la cantidad y agregar observaciones en una casilla especial (por ejemplo: <i>"Sin sal"</i>, <i>"Salsa aparte"</i>, <i>"Punto de cocción jugoso"</i>).</li>
+          <li><strong>Ver el Consumo Acumulado (Carrito):</strong> En todo momento, en la parte inferior de la pantalla aparece una barra flotante mostrando el total consumido hasta el momento. Al tocarla, se despliega la comanda completa.</li>
+          <li><strong>Confirmación:</strong> Una vez revisado el pedido, presiona el botón de confirmación. El pedido entra directamente al panel de control/cocina y opcionalmente envía el resumen por WhatsApp.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BLOQUE B: PANEL DE ADMINISTRACIÓN Y GESTIÓN -->
+    <div class="pt-8 border-t-2 border-cafe-900">
+      <div class="bg-cafe-900 text-bronce-400 px-4 py-2 rounded-t-xl inline-block font-heading font-bold uppercase tracking-wider text-sm">
+        Módulo 2
+      </div>
+      <h2 class="font-heading text-3xl font-bold text-cafe-900 mb-6">Panel de Administración y Autogestión</h2>
+    </div>
+
+    <!-- PASO 1: ACCESO -->
+    <section class="bg-white rounded-2xl filete-borde p-6 sm:p-8">
+      <div class="flex items-center gap-4 mb-4 border-b border-cafe-200 pb-4">
+        <div class="w-12 h-12 rounded-full bg-cafe-900 text-bronce-400 flex items-center justify-center text-xl shrink-0">1</div>
+        <h2 class="font-heading text-2xl font-bold text-cafe-900">¿Cómo ingresar al sistema?</h2>
+      </div>
+      <div class="space-y-4 text-cafe-800 text-lg">
+        <p>Para administrar tu página, no necesitas instalar nada. Todo se hace desde la misma web.</p>
+        <ul class="list-disc list-inside space-y-2 ml-2">
+          <li>Navegá hacia la esquina inferior izquierda de tu página web.</li>
+          <li>Hacé clic en el <strong>botón flotante con forma de engranaje</strong> <i class="fa-solid fa-gear text-cafe-500 mx-1"></i>.</li>
+          <li>Ingresá tus credenciales de acceso:
+            <div class="bg-cafe-50 p-4 rounded-xl mt-2 border border-cafe-200 font-mono text-sm max-w-sm">
+              <p><strong>Usuario:</strong> ElArgentino</p>
+              <p><strong>Contraseña:</strong> tango2024</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EL ORDEN IDEAL (TIPS) -->
+    <section class="bg-vino-600 text-cafe-50 rounded-2xl filete-borde p-6 sm:p-8 shadow-lg">
+      <div class="flex items-center gap-4 mb-4">
+        <i class="fa-solid fa-lightbulb text-3xl text-bronce-300"></i>
+        <h2 class="font-heading text-2xl font-bold text-bronce-300">El orden ideal para empezar</h2>
+      </div>
+      <p class="mb-4">Para que el sistema funcione perfecto desde el día uno, te recomendamos configurar todo siguiendo este orden:</p>
+      <ol class="list-decimal list-inside space-y-2 font-medium">
+        <li><strong>Configuración:</strong> Cargá tu WhatsApp, Instagram, logo y dirección del local.</li>
+        <li><strong>Categorías:</strong> Creá las secciones de tu menú (Ej: Desayunos, Parrilla, Minutas).</li>
+        <li><strong>Stock (Insumos):</strong> Cargá tus ingredientes base (Carne, Pan, Café, Bebidas).</li>
+        <li><strong>Menú (Productos):</strong> Creá los platos y vinculalos a los insumos creados.</li>
+        <li><strong>Mesas:</strong> Generá tus mesas e imprimí los códigos QR.</li>
+      </ol>
+    </section>
+
+    <!-- HERRAMIENTAS: GESTIÓN DE PEDIDOS Y COCINA -->
+    <section class="bg-white rounded-2xl filete-borde p-6 sm:p-8">
+      <div class="flex items-center gap-4 mb-4 border-b border-cafe-200 pb-4">
+        <i class="fa-solid fa-bell-concierge text-3xl text-cafe-900"></i>
+        <h2 class="font-heading text-2xl font-bold text-cafe-900">Pedidos y Vista Cocina</h2>
+      </div>
+      <div class="space-y-4 text-cafe-800 text-lg">
+        <p>En la pestaña <strong>"Pedidos"</strong> vas a recibir todo lo que pidan tus clientes, ya sea desde las mesas (escaneando el QR), para Take Away o Delivery.</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div class="bg-sky-50 p-4 rounded-xl border border-sky-100">
+            <h4 class="font-bold text-sky-800 mb-1">Ciclo del pedido</h4>
+            <p class="text-sm">Cada vez que toques un pedido, avanzará de estado: <br><span class="font-bold">Nuevo → Recibido → Entregado → Cobrado.</span> Cuando lo marques como cobrado, impactará automáticamente en la Caja.</p>
+          </div>
+          <div class="bg-cafe-50 p-4 rounded-xl border border-cafe-200">
+            <h4 class="font-bold text-cafe-900 mb-1"><i class="fa-solid fa-kitchen-set mr-2"></i>Vista Cocina</h4>
+            <p class="text-sm">Dentro de la pestaña de pedidos tenés un botón para abrir la "Vista Cocina". Esta vista es especial para poner en una tablet o monitor en tu cocina. Se actualiza sola y se ve en pantalla completa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS: CAJA Y STOCK -->
+    <section class="bg-white rounded-2xl filete-borde p-6 sm:p-8">
+      <div class="flex items-center gap-4 mb-4 border-b border-cafe-200 pb-4">
+        <i class="fa-solid fa-cash-register text-3xl text-cafe-900"></i>
+        <h2 class="font-heading text-2xl font-bold text-cafe-900">Caja y Stock (Insumos)</h2>
+      </div>
+      
+      <div class="space-y-6 text-cafe-800 text-lg">
+        <div>
+          <h3 class="font-heading text-xl font-bold text-vino-600 mb-2">Caja Diaria</h3>
+          <p>Acá vas a ver cuánto facturaste en el día, dividido por modalidad (Mesa, Take away o Delivery). Podés buscar días anteriores y ver tu ranking de los productos más vendidos en la historia del local.</p>
+        </div>
+
+        <div>
+          <h3 class="font-heading text-xl font-bold text-vino-600 mb-2">Control de Stock automático</h3>
+          <p>Para que el sistema descuente stock solo, tenés que:</p>
+          <ul class="list-disc list-inside space-y-1 ml-2 text-base mt-2">
+            <li>Ir a la pestaña <strong>Stock</strong> y crear un insumo (Ej: "Pan de Hamburguesa", 50 unidades, alerta si baja de 10).</li>
+            <li>Al crear un Producto o Combo, asignarle ese insumo (Ej: La Hamburguesa Completa consume 1 unidad de "Pan de Hamburguesa").</li>
+            <li>Cuando un cliente haga el pedido, el stock bajará solo. Si se acerca al límite, el sistema te avisará marcándolo en rojo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS: MENÚ, COMBOS Y PLATO DEL DÍA -->
+    <section class="bg-white rounded-2xl filete-borde p-6 sm:p-8">
+      <div class="flex items-center gap-4 mb-4 border-b border-cafe-200 pb-4">
+        <i class="fa-solid fa-utensils text-3xl text-cafe-900"></i>
+        <h2 class="font-heading text-2xl font-bold text-cafe-900">Gestión de tu Carta</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-cafe-800 text-base">
+        <div>
+          <h3 class="font-heading font-bold text-cafe-900 text-lg mb-2">1. Productos</h3>
+          <p>Es tu menú principal. Recordá cargar siempre una foto, un nombre llamativo, el precio y seleccionar a qué Categoría pertenece.</p>
+        </div>
+        <div>
+          <h3 class="font-heading font-bold text-cafe-900 text-lg mb-2">2. Combos</h3>
+          <p>Tienen un espacio destacado arriba del menú. Sirven para promociones especiales con precio cerrado (Ej: Café + 2 Medialunas).</p>
+        </div>
+        <div>
+          <h3 class="font-heading font-bold text-cafe-900 text-lg mb-2">3. Plato del Día</h3>
+          <p>Aparece gigante en la cabecera. Es ideal para actualizarlo todos los mediodías e impulsar el menú ejecutivo o la especialidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS: MESAS Y CHATBOT -->
+    <section class="bg-white rounded-2xl filete-borde p-6 sm:p-8">
+      <div class="flex items-center gap-4 mb-4 border-b border-cafe-200 pb-4">
+        <i class="fa-solid fa-qrcode text-3xl text-cafe-900"></i>
+        <h2 class="font-heading text-2xl font-bold text-cafe-900">Mesas y Chatbot Automático</h2>
+      </div>
+      
+      <div class="space-y-4 text-cafe-800 text-lg">
+        <p><strong class="text-cafe-900">Códigos QR para Mesas:</strong> En la pestaña "Mesas", poné el número de tus mesas (1, 2, 3, etc.). El sistema generará un código QR único para cada una. Tocalos para guardarlos e imprimirlos. Cuando el cliente escanea el QR, su pedido te llega indicando la mesa exacta automáticamente.</p>
+        
+        <p><strong class="text-cafe-900">Chatbot de Preguntas:</strong> Tenés un ícono de mensajes abajo a la derecha de tu web. Desde la pestaña "Chatbot", podés cargar un saludo automático y preguntas frecuentes que tengan tus clientes (ej: ¿Cuáles son los horarios?, ¿Tienen opciones sin TACC?) para que el sistema les responda solo.</p>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS: CONFIGURACIÓN -->
+    <section class="bg-white rounded-2xl filete-borde p-6 sm:p-8">
+      <div class="flex items-center gap-4 mb-4 border-b border-cafe-200 pb-4">
+        <i class="fa-solid fa-sliders text-3xl text-cafe-900"></i>
+        <h2 class="font-heading text-2xl font-bold text-cafe-900">Pestaña Configuración</h2>
+      </div>
+      <div class="space-y-3 text-cafe-800 text-base">
+        <p>Desde la pestaña <strong>Configuración</strong> podés actualizar en cualquier momento:</p>
+        <ul class="list-disc list-inside space-y-1 ml-2">
+          <li><strong>WhatsApp del Local:</strong> Para recibir los pedidos e inquietudes de tus clientes.</li>
+          <li><strong>Instagram y Redes:</strong> Links directos para tus comensales.</li>
+          <li><strong>Dirección y Horarios:</strong> Información visible en el pie de página de la web.</li>
+          <li><strong>Logo e Imagen de Portada:</strong> Personalización estética del restaurante.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- FOOTER DEL TUTORIAL -->
+    <footer class="text-center pt-8 pb-10 border-t border-cafe-200 no-print">
+      <p class="font-heading text-xl text-cafe-900 font-bold mb-2">¡Manual listo para entregar!</p>
+      <p class="text-cafe-600 text-sm">Este documento está maquetado para verse perfecto en cualquier pantalla o imprimirse directamente en formato PDF.</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
+
